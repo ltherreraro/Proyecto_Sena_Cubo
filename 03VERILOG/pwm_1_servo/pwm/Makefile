@@ -1,6 +1,6 @@
 DESIGN          = pwm
 PINS            = $(DESIGN).ucf
-DEVICE          = XC7A100T-1CSG324
+DEVICE          = XC6SLX16-CSG324
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
                    -g CRC:enable -g StartUpClk:CCLK
 

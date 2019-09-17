@@ -5,35 +5,35 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Wed May 23 13:27:19 2018">
+  <application stringID="NgdBuild" timeStamp="Mon Sep  9 11:20:03 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/ekativa-project/bin:/home/ekativa-project/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/lm32/bin"/>
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//lib/lin64:/usr/lib/i386i-linux-gnu/"/>
         </row>
         <row stringID="row" value="1">
-          <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE/"/>
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/lisseth/bin:/home/lisseth/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-10-oracle/bin:/usr/lib/jvm/java-10-oracle/db/bin:/opt/rtems-4.11/bin/:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/lm32/bin"/>
         </row>
         <row stringID="row" value="2">
-          <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//lib/lin64"/>
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE/"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Ubuntu"/>
-        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.3 LTS"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.6 LTS"/>
       </item>
-      <item stringID="User_EnvHost" value="ekativaproject-Lenovo-Yoga-500-14IBD"/>
+      <item stringID="User_EnvHost" value="lisseth-HP-Laptop-14-bw0xx"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"/>
-          <item stringID="speed" value="1764.607 MHz"/>
+          <item stringID="arch" value="AMD A9-9420 RADEON R5, 5 COMPUTE CORES 2C+3G"/>
+          <item stringID="speed" value="3066.501 MHz"/>
         </row>
       </table>
     </section>
@@ -52,7 +52,7 @@
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="3"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="47"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="161"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="764"/>
@@ -71,23 +71,23 @@
         <item dataType="int" stringID="NGDBUILD_NUM_LD" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDC" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDE" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="567"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="210"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="230"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="232"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="323"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="822"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="935"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="559"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="211"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="231"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="239"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="313"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="831"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="918"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="16"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAM32X1D" value="64"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_RAMB36E1" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAMB16BWER" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="733"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="3"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="47"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="161"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="764"/>
@@ -107,16 +107,17 @@
         <item dataType="int" stringID="NGDBUILD_NUM_LD" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDC" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDE" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="567"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="210"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="230"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="232"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="323"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="822"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="935"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="559"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="211"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="231"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="239"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="313"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="831"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="918"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="16"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_RAMB36E1" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAMB16BWER" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="733"/>
       </section>

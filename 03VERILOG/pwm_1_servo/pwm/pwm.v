@@ -1,6 +1,6 @@
 module pwm #(
 parameter T=1000000,
-parameter D=30000
+parameter D=40000
 )
 
 ( 	input 		clk, 

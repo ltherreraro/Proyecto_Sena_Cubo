@@ -1,10 +1,10 @@
 Release 14.7 - Bitgen P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
-Loading device for application Rf_Device from file '7a100t.nph' in environment
+Loading device for application Rf_Device from file '6slx16.nph' in environment
 /opt/Xilinx/14.7/ISE_DS/ISE/.
-   "system" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
+   "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
-Wed May 23 13:30:51 2018
+Mon Sep  9 11:22:29 2019
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w system-routed.ncd system.bit 
 
@@ -20,23 +20,13 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | DebugBitstream       | No*                  |
 +----------------------+----------------------+
-| ConfigRate           | 3*                   |
+| ConfigRate           | 2*                   |
 +----------------------+----------------------+
 | StartupClk           | Cclk*                |
 +----------------------+----------------------+
-| CclkPin              | Pullup*              |
-+----------------------+----------------------+
 | DonePin              | Pullup*              |
 +----------------------+----------------------+
-| M0Pin                | Pullup*              |
-+----------------------+----------------------+
-| M1Pin                | Pullup*              |
-+----------------------+----------------------+
-| M2Pin                | Pullup*              |
-+----------------------+----------------------+
 | ProgPin              | Pullup*              |
-+----------------------+----------------------+
-| InitPin              | Pullup*              |
 +----------------------+----------------------+
 | TckPin               | Pullup*              |
 +----------------------+----------------------+
@@ -52,17 +42,15 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | GTS_cycle            | 5*                   |
 +----------------------+----------------------+
-| OverTempPowerDown    | Disable*             |
-+----------------------+----------------------+
 | LCK_cycle            | NoWait*              |
-+----------------------+----------------------+
-| Match_cycle          | NoWait               |
 +----------------------+----------------------+
 | DONE_cycle           | 4*                   |
 +----------------------+----------------------+
 | Persist              | No*                  |
 +----------------------+----------------------+
-| DonePipe             | Yes*                 |
+| DriveDone            | No*                  |
++----------------------+----------------------+
+| DonePipe             | No*                  |
 +----------------------+----------------------+
 | Security             | None*                |
 +----------------------+----------------------+
@@ -70,67 +58,61 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | ActiveReconfig       | No*                  |
 +----------------------+----------------------+
-| Encrypt              | No*                  |
+| Partial              | (Not Specified)*     |
 +----------------------+----------------------+
-| EncryptKeySelect     | bbram*               |
+| Encrypt              | No*                  |
 +----------------------+----------------------+
 | Key0                 | pick*                |
 +----------------------+----------------------+
 | StartCBC             | pick*                |
 +----------------------+----------------------+
-| HKey                 | pick*                |
-+----------------------+----------------------+
 | KeyFile              | (Not Specified)*     |
 +----------------------+----------------------+
-| DCIUpdateMode        | AsRequired*          |
+| drive_awake          | No*                  |
 +----------------------+----------------------+
-| ICAP_Select          | Auto*                |
+| Reset_on_err         | No*                  |
 +----------------------+----------------------+
-| ConfigFallback       | Disable*             |
+| suspend_filter       | Yes*                 |
 +----------------------+----------------------+
-| SelectMAPAbort       | Enable*              |
+| en_sw_gsr            | No*                  |
 +----------------------+----------------------+
-| BPI_page_size        | 1*                   |
+| en_suspend           | No*                  |
 +----------------------+----------------------+
-| BPI_1st_read_cycle   | 1*                   |
+| sw_clk               | Startupclk*          |
 +----------------------+----------------------+
-| next_config_addr     | None*                |
+| sw_gwe_cycle         | 5*                   |
++----------------------+----------------------+
+| sw_gts_cycle         | 4*                   |
++----------------------+----------------------+
+| multipin_wakeup      | No*                  |
++----------------------+----------------------+
+| wakeup_mask          | 0x00*                |
++----------------------+----------------------+
+| ExtMasterCclk_en     | No*                  |
++----------------------+----------------------+
+| ExtMasterCclk_divide | 1*                   |
++----------------------+----------------------+
+| CrcCoverage          | No*                  |
++----------------------+----------------------+
+| glutmask             | Yes*                 |
++----------------------+----------------------+
+| next_config_addr     | 0x00000000*          |
++----------------------+----------------------+
+| next_config_new_mode | No*                  |
++----------------------+----------------------+
+| next_config_boot_mode | 001*                 |
++----------------------+----------------------+
+| next_config_register_write | Enable*              |
 +----------------------+----------------------+
 | next_config_reboot   | Enable*              |
 +----------------------+----------------------+
-| InitSignalsError     | Enable*              |
+| golden_config_addr   | 0x00000000*          |
 +----------------------+----------------------+
-| XADCPartialReconfig  | Disable*             |
-+----------------------+----------------------+
-| XADCEnhancedLinearity | Off*                 |
-+----------------------+----------------------+
-| JTAG_XADC            | Enable*              |
-+----------------------+----------------------+
-| Disable_JTAG         | No*                  |
-+----------------------+----------------------+
-| XADCPowerDown        | Disable*             |
-+----------------------+----------------------+
-| Partial              | (Not Specified)*     |
-+----------------------+----------------------+
-| ExtMasterCclk_en     | Disable*             |
-+----------------------+----------------------+
-| BPI_sync_mode        | Disable*             |
-+----------------------+----------------------+
-| SPI_32bit_addr       | No*                  |
-+----------------------+----------------------+
-| SPI_buswidth         | 1*                   |
-+----------------------+----------------------+
-| SPI_Fall_Edge        | No*                  |
-+----------------------+----------------------+
-| RevisionSelect       | 00*                  |
-+----------------------+----------------------+
-| RevisionSelect_tristate | Disable*             |
+| failsafe_user        | 0x0000*              |
 +----------------------+----------------------+
 | TIMER_CFG            | None*                |
 +----------------------+----------------------+
-| TIMER_USR            | None*                |
-+----------------------+----------------------+
-| USR_ACCESS           | None*                |
+| spi_buswidth         | 1*                   |
 +----------------------+----------------------+
 | TimeStamp            | Default*             |
 +----------------------+----------------------+
@@ -144,12 +126,13 @@ Summary of Bitgen Options:
 No constraints file was processed.
 
 Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net cam/cm/we_G is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    cam/cm/GND_3_o_GND_3_o_MUX_8_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:367 - The signal <href_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
 DRC detected 0 errors and 2 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...

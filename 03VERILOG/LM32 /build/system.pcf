@@ -1,41 +1,39 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed May 23 13:29:29 2018
+// Written by: Map P.20131013 on Mon Sep 09 11:21:22 2019
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "pwm0" LOCATE = SITE "H4" LEVEL 1;
-COMP "pwm1" LOCATE = SITE "H1" LEVEL 1;
-COMP "pwm2" LOCATE = SITE "G1" LEVEL 1;
-COMP "pwm3" LOCATE = SITE "G3" LEVEL 1;
-COMP "pwm4" LOCATE = SITE "H2" LEVEL 1;
-COMP "pwm5" LOCATE = SITE "G4" LEVEL 1;
-COMP "pwm6" LOCATE = SITE "G2" LEVEL 1;
-COMP "pwm7" LOCATE = SITE "F3" LEVEL 1;
-COMP "rst" LOCATE = SITE "U9" LEVEL 1;
-COMP "vsync" LOCATE = SITE "V11" LEVEL 1;
-PIN vsync_pin<0> = BEL "vsync" PINNAME PAD;
-PIN "vsync_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "oe" LOCATE = SITE "V15" LEVEL 1;
-COMP "we" LOCATE = SITE "G14" LEVEL 1;
-COMP "rdclk" LOCATE = SITE "K16" LEVEL 1;
-COMP "href" LOCATE = SITE "P15" LEVEL 1;
-COMP "uart_txd" LOCATE = SITE "D4" LEVEL 1;
-COMP "din<0>" LOCATE = SITE "E18" LEVEL 1;
-COMP "din<1>" LOCATE = SITE "E17" LEVEL 1;
-COMP "clk" LOCATE = SITE "E3" LEVEL 1;
-COMP "din<2>" LOCATE = SITE "D18" LEVEL 1;
-COMP "din<3>" LOCATE = SITE "D17" LEVEL 1;
-COMP "din<4>" LOCATE = SITE "C17" LEVEL 1;
-COMP "din<5>" LOCATE = SITE "F14" LEVEL 1;
-COMP "din<6>" LOCATE = SITE "G13" LEVEL 1;
-COMP "din<7>" LOCATE = SITE "B13" LEVEL 1;
-COMP "uart_rxd" LOCATE = SITE "C4" LEVEL 1;
-COMP "rrst" LOCATE = SITE "T9" LEVEL 1;
-COMP "wrst" LOCATE = SITE "R16" LEVEL 1;
-COMP "led" LOCATE = SITE "T8" LEVEL 1;
-COMP "led1" LOCATE = SITE "V9" LEVEL 1;
-PIN bram0/Mram_ram_pins<63> = BEL "bram0/Mram_ram" PINNAME CLKARDCLKU;
-PIN bram0/Mram_ram_pins<62> = BEL "bram0/Mram_ram" PINNAME CLKARDCLKL;
+COMP "oe" LOCATE = SITE "J3" LEVEL 1;
+COMP "we" LOCATE = SITE "K1" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "led" LOCATE = SITE "U16" LEVEL 1;
+COMP "rst" LOCATE = SITE "T10" LEVEL 1;
+COMP "led1" LOCATE = SITE "K2" LEVEL 1;
+COMP "href" LOCATE = SITE "L4" LEVEL 1;
+COMP "pwm0" LOCATE = SITE "G11" LEVEL 1;
+COMP "pwm1" LOCATE = SITE "F10" LEVEL 1;
+COMP "pwm2" LOCATE = SITE "F11" LEVEL 1;
+COMP "pwm3" LOCATE = SITE "E11" LEVEL 1;
+COMP "pwm4" LOCATE = SITE "D12" LEVEL 1;
+COMP "pwm5" LOCATE = SITE "C12" LEVEL 1;
+COMP "pwm6" LOCATE = SITE "F12" LEVEL 1;
+COMP "pwm7" LOCATE = SITE "E12" LEVEL 1;
+COMP "rrst" LOCATE = SITE "K5" LEVEL 1;
+COMP "wrst" LOCATE = SITE "K3" LEVEL 1;
+COMP "rdclk" LOCATE = SITE "J1" LEVEL 1;
+COMP "vsync" LOCATE = SITE "L3" LEVEL 1;
+COMP "din<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "din<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "din<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "din<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "din<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "din<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "din<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "din<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "uart_rxd" LOCATE = SITE "N17" LEVEL 1;
+COMP "uart_txd" LOCATE = SITE "N18" LEVEL 1;
+PIN bram0/Mram_ram1_pins<10> = BEL "bram0/Mram_ram1" PINNAME CLKA;
+PIN bram0/Mram_ram2_pins<10> = BEL "bram0/Mram_ram2" PINNAME CLKA;
 TIMEGRP sys_clk_pin = BEL "cam/wb_dat_o_0" BEL "cam/wb_dat_o_1" BEL
         "cam/wb_dat_o_2" BEL "cam/wb_dat_o_3" BEL "cam/wb_dat_o_4" BEL
         "cam/wb_dat_o_5" BEL "cam/wb_dat_o_7" BEL "cam/wb_dat_o_6" BEL
@@ -1052,10 +1050,10 @@ TIMEGRP sys_clk_pin = BEL "cam/wb_dat_o_0" BEL "cam/wb_dat_o_1" BEL
         "pwm/pwm_p/E5" BEL "pwm/pwm_p/E1" BEL "pwm/pwm_p/E2" BEL
         "uart0/rx_ack" BEL "uart0/tx_wr" BEL "i2c0/wb_ack_o" BEL
         "timer0/irqen1" BEL "timer0/irqen0" BEL "uart0/uart0/uart_txd" BEL
-        "cam/cm/rdclk" BEL "uart0/uart0/rx_count16_3" BEL "pwm/pwm_p/pw/pwm7"
-        BEL "pwm/pwm_p/pw/pwm5" BEL "pwm/pwm_p/pw/pwm4" BEL
-        "pwm/pwm_p/pw/pwm6" BEL "pwm/pwm_p/pw/pwm3" BEL "pwm/pwm_p/pw/pwm2"
-        BEL "pwm/pwm_p/pw/pwm0" BEL "pwm/pwm_p/pw/pwm1" BEL
+        "cam/cm/rdclk" BEL "pwm/pwm_p/pw/pwm7" BEL "pwm/pwm_p/pw/pwm5" BEL
+        "pwm/pwm_p/pw/pwm4" BEL "pwm/pwm_p/pw/pwm6" BEL "pwm/pwm_p/pw/pwm3"
+        BEL "pwm/pwm_p/pw/pwm2" BEL "pwm/pwm_p/pw/pwm0" BEL
+        "pwm/pwm_p/pw/pwm1" BEL "uart0/uart0/rx_count16_3" BEL
         "lm0/Mcompar_cmp_zero_cy<10>_FRB" BEL "pwm/pwm_p/d_out_0_BRB0" BEL
         "pwm/pwm_p/d_out_0_BRB1" BEL "pwm/pwm_p/d_out_0_BRB2" BEL
         "pwm/pwm_p/d_out_7_BRB1" BEL "pwm/pwm_p/d_out_7_BRB2" BEL
@@ -1104,7 +1102,8 @@ TIMEGRP sys_clk_pin = BEL "cam/wb_dat_o_0" BEL "cam/wb_dat_o_1" BEL
         "lm0/branch_x_BRB1" BEL "lm0/branch_x_BRB2" BEL "lm0/branch_x_BRB3"
         BEL "lm0/branch_x_BRB4" BEL "lm0/branch_x_BRB5" BEL "lm0/store_x_BRB0"
         BEL "lm0/store_x_BRB5" BEL "lm0/w_result_sel_mul_x_BRB0" BEL
-        "clk_BUFGP/BUFG" BEL "uart0/uart0/uart_txd_1" BEL
+        "clk_BUFGP/BUFG" PIN "bram0/Mram_ram1_pins<10>" PIN
+        "bram0/Mram_ram2_pins<10>" BEL "uart0/uart0/uart_txd_1" BEL
         "pwm/pwm_p/pw/pwm0_1" BEL "pwm/pwm_p/pw/pwm1_1" BEL
         "pwm/pwm_p/pw/pwm2_1" BEL "pwm/pwm_p/pw/pwm3_1" BEL
         "pwm/pwm_p/pw/pwm4_1" BEL "pwm/pwm_p/pw/pwm5_1" BEL
@@ -1172,7 +1171,7 @@ TIMEGRP sys_clk_pin = BEL "cam/wb_dat_o_0" BEL "cam/wb_dat_o_1" BEL
         "lm0/Mram_registers4/SP" BEL "lm0/Mram_registers4/DP" BEL
         "lm0/Mram_registers6/SP" BEL "lm0/Mram_registers6/DP" BEL
         "lm0/Mram_registers2/SP" BEL "lm0/Mram_registers2/DP" BEL
-        "lm0/Mram_registers3/SP" BEL "lm0/Mram_registers3/DP" PIN
-        "bram0/Mram_ram_pins<63>" PIN "bram0/Mram_ram_pins<62>";
+        "lm0/Mram_registers3/SP" BEL "lm0/Mram_registers3/DP";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 
